@@ -30,6 +30,15 @@ const getRandomTheme = () => {
   return THEMES[Math.floor(Math.random() * THEMES.length)];
 };
 
+const getNextTheme = (polygonCount) => {
+  // Pour les 6 premières cartes, utiliser chaque thème une seule fois
+  if (polygonCount < THEMES.length) {
+    return THEMES[polygonCount];
+  }
+  // À partir de la 7ème, réutiliser aléatoirement
+  return getRandomTheme();
+};
+
 export default function App() {
   const [activeNote, setActiveNote] = useState(null);
   const [mode, setMode] = useState('normal'); // 'normal' ou 'polygon'
@@ -114,7 +123,7 @@ export default function App() {
         if (currentPolygon.length >= 3) {
           const newPolygonData = {
             points: currentPolygon,
-            theme: getRandomTheme(),
+            theme: getNextTheme(polygons.length),
           };
           setPolygons((prev) => {
             const newPolygons = [...prev, newPolygonData];
