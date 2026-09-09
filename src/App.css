@@ -11,23 +11,124 @@
 	height: 100%;
 }
 
-.play-button {
-	position: absolute;
-	top: 50%;
-	right: calc(100% + 16px);
-	transform: translateY(-50%);
-	padding: 10px 22px;
-	border: 2px solid #27ae60;
-	border-radius: 6px;
-	background-color: #27ae60;
-	color: #ffffff;
-	font-weight: bold;
+/* Conteneur des cards de polygones */
+.cards-container {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+	gap: 16px;
+	margin-top: 24px;
+	max-width: 100%;
+}
+
+/* Carte de polygone individuelle */
+.polygon-card {
+	border: 2px solid;
+	border-radius: 10px;
+	padding: 16px;
+	background-color: #f8f9fa;
+	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+	transition: all 0.2s ease;
 	cursor: pointer;
+	position: relative;
+}
+
+.polygon-card.selected {
+	background-color: white;
+	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.polygon-card:hover {
+	box-shadow: 0 3px 10px rgba(0, 0, 0, 0.12);
+	transform: translateY(-2px);
+}
+
+/* Bouton de suppression (croix) */
+.card-delete-btn {
+	position: absolute;
+	top: 8px;
+	right: 8px;
+	background: none;
+	border: none;
+	font-size: 24px;
+	cursor: pointer;
+	padding: 0;
+	line-height: 1;
+	transition: transform 0.2s;
+	opacity: 0.7;
+}
+
+.card-delete-btn:hover {
+	opacity: 1;
+	transform: scale(1.2);
+}
+
+/* Titre de la carte */
+.polygon-card h3 {
+	margin-bottom: 12px;
+	font-size: 1.1rem;
+	font-weight: 600;
+}
+
+/* Bouton de lecture */
+.card-play-btn {
+	width: 100%;
+	padding: 10px 16px;
+	border-radius: 6px;
+	border: 2px solid;
+	background-color: currentColor;
+	color: white;
+	font-weight: bold;
+	font-size: 0.95rem;
+	cursor: pointer;
+	margin-bottom: 12px;
+	transition: all 0.2s ease;
+}
+
+.card-play-btn:hover {
+	opacity: 0.85;
+	transform: scale(1.02);
+}
+
+.card-play-btn:active {
+	transform: scale(0.98);
+}
+
+/* Section des notes */
+.card-notes {
+	margin-top: 12px;
+}
+
+.card-notes p {
+	margin: 8px 0 6px 0;
+	font-weight: bold;
+	font-size: 0.9rem;
+	color: #2c3e50;
+}
+
+/* Liste des notes avec tags */
+.notes-list {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 6px;
+}
+
+/* Tag de note individuelle */
+.note-tag {
+	display: inline-block;
+	padding: 5px 10px;
+	border-radius: 4px;
+	border: 1px solid;
+	font-size: 0.85rem;
+	font-weight: 600;
+	transition: all 0.2s ease;
+}
+
+.note-tag:hover {
+	opacity: 0.8;
 }
 
 @media (max-width: 520px) {
-	.play-button {
-		right: auto;
-		left: 8px;
+	.cards-container {
+		grid-template-columns: 1fr;
 	}
 }
