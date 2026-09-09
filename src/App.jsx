@@ -433,9 +433,7 @@ export default function App() {
       {/* Guide textuel */}
       <div style={{ marginTop: '15px', color: '#555', fontSize: '0.95rem' }}>
         {mode === 'polygon' ? (
-          <p style={{ color: '#e74c3c' }}>
-            <strong>Mode Polygone :</strong> Cliquez sur les notes pour tracer. Re-cliquez sur la <span style={{ color: '#27ae60', fontWeight: 'bold' }}>première note (en vert)</span> pour fermer la forme.
-          </p>
+          <p>Reliez des notes pour écouter un accord.</p>
         ) : (
           <p>Cliquez sur une note pour écouter sa fréquence audio.</p>
         )}
