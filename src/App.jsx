@@ -111,6 +111,22 @@ export default function App() {
   // Clic sur une note
   const handleNoteClick = (note, point, e) => {
     e.stopPropagation();
+    
+    // Vérifier si c'est la même note qui est déjà active
+    const isSameAsActive = activeNote === note.name;
+    
+    if (isSameAsActive) {
+      // Cas 1 : re-clic sur la même note sélectionnée
+      if (mode === 'polygon') {
+        // Annuler le polygone en cours
+        setCurrentPolygon([]);
+        setMousePos(null);
+      }
+      // Désélectionner la note (valable pour les deux modes)
+      setActiveNote(null);
+      return;
+    }
+
     playSound(note.freq, note.name);
 
     if (mode === 'polygon') {
@@ -377,6 +393,7 @@ export default function App() {
                 onClick={(e) => {
                   e.stopPropagation();
                   setSelectedPolygonIdx(polyIdx);
+                  setActiveNote(null);
                   playPolygon(polygonData);
                 }}
                 style={{
