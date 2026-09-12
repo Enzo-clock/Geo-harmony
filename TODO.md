@@ -5,7 +5,6 @@
 - Add différents sons sélectionnables
 - Add circle chromatique
 - Add circle microtonal
-
-Idées applications / projets : 
-Edtech : chemin optimal type jeu desmos pour ramasser tous les items avec des fonctions
-Hiit : système de chrono : autant qu'on veut avec le nombre de circuits, par exemple : 5x (40sec exo, 20s de repos, 60sec repos entre rounds)
+- Pouvoir drag and drop les cards pour changer l'ordre
+- Pouvoir ajouter une note à un accord déjà créé en un clic
+- Pouvoir drag and drop des notes pour changer leur place

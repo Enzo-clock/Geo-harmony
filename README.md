@@ -75,7 +75,7 @@ L'application illustre :
 
 ## 📝 Notes de développement
 
-Voir [notes.md](notes.md) pour les idées de futures fonctionnalités et améliorations.
+Voir [TODO.md](TODO.md) pour les idées de futures fonctionnalités et améliorations.
 
 ## 📄 Licence
 
