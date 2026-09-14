@@ -1,5 +1,4 @@
 - Faire un mode arpège
-- Différents accords en même temps avec couleur
 - Quand une touche est sélectionné, montrer une option pour augmenter d'une octave ou descendre d'une octave ou réinitialiser la fréquence par défaut
 - Add volume gestion
 - Add différents sons sélectionnables
@@ -8,3 +7,7 @@
 - Pouvoir drag and drop les cards pour changer l'ordre
 - Pouvoir ajouter une note à un accord déjà créé en un clic
 - Pouvoir drag and drop des notes pour changer leur place
+- UX : une couleur par note > faire un thème par carte en fonction des notes sélectionnées : système de bandes diagonales colorées ?
+- Toujours faire en sorte que quelque soit les points sélectionnés, le polygone tracé fasse le tour des points, sans passage transversal
+- BUG : en spamant les notes, les sons ne sortent plus
+- FEAT : possibilité de créer des polygones symétriques grâce à différents axes / possibilité de choisir son axe

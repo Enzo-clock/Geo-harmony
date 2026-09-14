@@ -191,9 +191,9 @@ export default function App() {
 
   return (
     <div style={{ textAlign: 'center', fontFamily: 'sans-serif', padding: '30px 20px' }}>
-      <h1 style={{ marginBottom: '8px' }}>Circle of Fifths</h1>
+      <h1 style={{ marginBottom: '16px' }}>Circle of Fifths</h1>
       <p style={{ color: '#666', fontStyle: 'italic', marginBottom: '20px' }}>
-        Harmony viewed through the prism of geometry
+        Harmony perceived through the prism of geometry
       </p>
 
       {/* Barre d'outils / Modes */}
