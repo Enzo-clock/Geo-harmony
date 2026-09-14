@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import './App.css';
 
 const NOTES = [
@@ -191,8 +191,8 @@ export default function App() {
 
   return (
     <div style={{ textAlign: 'center', fontFamily: 'sans-serif', padding: '30px 20px' }}>
-      <h1 style={{ marginBottom: '16px' }}>Circle of Fifths</h1>
-      <p style={{ color: '#666', fontStyle: 'italic', marginBottom: '20px' }}>
+      <h1 style={{ marginBottom: '32px' }}>Circle of Fifths</h1>
+      <p style={{ color: '#666', fontStyle: 'italic', marginBottom: '56px' }}>
         Harmony perceived through the prism of geometry
       </p>
 
